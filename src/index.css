@@ -17,8 +17,11 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Purple-based primary colors for auth theme */
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 262 100% 95%;
+    --primary-hover: 262 83% 48%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -34,7 +37,30 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --input-focus: 210 40% 96.1%;
+    --ring: 262 83% 58%;
+
+    /* Auth-specific colors */
+    --auth-purple: 262 83% 58%;
+    --auth-purple-dark: 262 83% 48%;
+    --auth-purple-light: 262 100% 95%;
+    --auth-gray-50: 210 40% 96.1%;
+    --auth-gray-300: 214.3 31.8% 91.4%;
+    --auth-gray-500: 215.4 16.3% 46.9%;
+    --auth-gray-600: 220 13% 46%;
+    --auth-gray-700: 215 25% 27%;
+    --auth-gray-900: 222.2 84% 4.9%;
+
+    /* Gradients */
+    --gradient-purple: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 83% 48%));
+    --gradient-purple-hover: linear-gradient(135deg, hsl(262 83% 48%), hsl(262 83% 38%));
+
+    /* Shadows */
+    --shadow-auth-form: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
+    --shadow-auth-button: 0 4px 14px 0 hsl(262 83% 58% / 0.39);
+
+    /* Animations */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 
@@ -101,5 +127,54 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Mobile optimizations */
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 1rem);
+  }
+  
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  /* Chrome-specific dialog fixes */
+  .dialog-chrome-fix {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+  }
+  
+  /* Ensure proper flexbox behavior in Chrome */
+  .flex-chrome-fix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  /* Better viewport unit handling */
+  .vh-chrome-fix {
+    height: 90vh;
+    height: calc(var(--vh, 1vh) * 90);
+  }
+  
+  @supports (-webkit-appearance: none) {
+    .mobile-dialog-chrome {
+      width: 95vw !important;
+      height: 85vh !important;
+      max-width: 95vw !important;
+      max-height: 85vh !important;
+      margin: 0 !important;
+      position: fixed !important;
+      left: 50% !important;
+      top: 50% !important;
+      transform: translate(-50%, -50%) !important;
+    }
   }
 }

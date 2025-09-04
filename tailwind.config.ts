@@ -18,7 +18,13 @@ export default {
 			}
 		},
 		extend: {
-			colors: {
+      fontFamily: {
+        'playfair': ['Playfair Display', 'serif'],
+        'inter': ['Inter', 'sans-serif'],
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        serif: ['Playfair Display', 'ui-serif', 'Georgia', 'serif'],
+      },
+      colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -26,7 +32,20 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					light: 'hsl(var(--primary-light))',
+					hover: 'hsl(var(--primary-hover))'
+				},
+				auth: {
+					purple: 'hsl(var(--auth-purple))',
+					'purple-dark': 'hsl(var(--auth-purple-dark))',
+					'purple-light': 'hsl(var(--auth-purple-light))',
+					'gray-50': 'hsl(var(--auth-gray-50))',
+					'gray-300': 'hsl(var(--auth-gray-300))',
+					'gray-500': 'hsl(var(--auth-gray-500))',
+					'gray-600': 'hsl(var(--auth-gray-600))',
+					'gray-700': 'hsl(var(--auth-gray-700))',
+					'gray-900': 'hsl(var(--auth-gray-900))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -67,6 +86,17 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			backgroundImage: {
+				'gradient-purple': 'var(--gradient-purple)',
+				'gradient-purple-hover': 'var(--gradient-purple-hover)'
+			},
+			boxShadow: {
+				'auth-form': 'var(--shadow-auth-form)',
+				'auth-button': 'var(--shadow-auth-button)'
+			},
+			transitionProperty: {
+				'smooth': 'var(--transition-smooth)'
 			},
 			keyframes: {
 				'accordion-down': {

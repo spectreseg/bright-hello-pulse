@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/81ed151c-b1c8-495e-9a27-10557f2a3ed7
+**URL**: https://lovable.dev/projects/f833eaeb-df37-4fd4-b936-ba35ac438513
 
 ## How can I edit this code?
 
@@ -10,7 +10,7 @@ There are several ways of editing your application.
 
 **Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/81ed151c-b1c8-495e-9a27-10557f2a3ed7) and start prompting.
+Simply visit the [Lovable Project](https://lovable.dev/projects/f833eaeb-df37-4fd4-b936-ba35ac438513) and start prompting.
 
 Changes made via Lovable will be committed automatically to this repo.
 
@@ -59,10 +59,31 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+- Supabase (Backend & Authentication)
+- Google Maps JavaScript API (Location mapping)
+
+## 🗺️ New Feature: Sewanee Food Map
+
+The app now includes an integrated Google Maps feature that shows food locations across the University of the South (Sewanee) campus!
+
+**Features:**
+- Interactive campus map with food post markers
+- Color-coded indicators (active, almost finished, expired)
+- Detailed info windows with food details
+- Toggle between active and expired posts
+- Sewanee-specific location recognition
+
+**How to use:**
+1. Click "Find Food" in the main dashboard
+2. Browse the interactive map to find food near you
+3. Click markers to see detailed information
+4. Toggle between active and expired food posts
+
+See [MAPS_README.md](./MAPS_README.md) for detailed documentation.
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/81ed151c-b1c8-495e-9a27-10557f2a3ed7) and click on Share -> Publish.
+Simply open [Lovable](https://lovable.dev/projects/f833eaeb-df37-4fd4-b936-ba35ac438513) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
 
