@@ -16,7 +16,7 @@ const queryClient = new QueryClient();
 const App = () => {
   // Load Google Maps globally once
   useEffect(() => {
-    const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+    const apiKey = "AIzaSyBKU09BeZYU7NJLAmx4JX56l-Gk1kSUdjY";
     console.log('App: Google Maps loading check:', { 
       apiKey: apiKey ? `${apiKey.substring(0, 10)}...` : 'Missing',
       alreadyLoaded: !!(window as any).google?.maps,

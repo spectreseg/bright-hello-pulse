@@ -111,7 +111,7 @@ const FindFood = () => {
   useEffect(() => {
     if (!mapRef.current || mapLoaded || mapError) return;
 
-    const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+    const apiKey = "AIzaSyBKU09BeZYU7NJLAmx4JX56l-Gk1kSUdjY";
     if (!apiKey) {
       setMapError('Google Maps API key not found');
       return;
