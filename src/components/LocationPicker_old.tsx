@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { MapPin, Navigation, Building2 } from 'lucide-react';
@@ -23,6 +23,7 @@ export const LocationPicker: React.FC<LocationPickerProps> = ({
   const [mapLoaded, setMapLoaded] = useState(false);
   const [selectedCoords, setSelectedCoords] = useState<{ lat: number; lng: number } | null>(null);
   const [mapInstance, setMapInstance] = useState<any>(null);
+  const mapRef = useRef<HTMLDivElement>(null);
 
   // Initialize map when picker opens
   useEffect(() => {
